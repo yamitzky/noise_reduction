@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <%= stylesheet_link_tag "site.css" %>
+    <%= javascript_include_tag "app.js" %>
+    <%= yield_content :head %>
+    <meta name="viewport" content="width=640px">
+  </head>
+
+  <body>
+    <div id="panel">
+      <div id="bg">
+				<div id="bg_img">
+				</div>
+      </div>
+      <div id="fg">
+				<div>
+					<%= image_tag "fg.png", :id => "fg_img" %><br>
+				</div>
+				<div id="hand_wrapper">
+					<%= image_tag "hand.png", :id => "hand_img" %>
+				</div>
+				<div>
+					<%= image_tag "stop_peropero.png", :id => "stop_img" %>
+				</div>
+      </div>
+    </div>
+		<p>visit here using your iPhone(or Android 3+, not supported) and tilt your device.<br>
+		feel free to <strong>fork</strong>. az-nyan wants you. thanks.</p>
+  </body>
+</html>
