@@ -1,12 +1,8 @@
 window.addEventListener 'load', ->
-  BG_MAX = 160
   rotation = 0
   first_updown = null # to calculate updown-tilting offset
   last_date = new Date()
-  bg = document.getElementById("bg") # background tile
-  fg = document.getElementById("fg_img") # az-nyan's body and face'
-  hand = document.getElementById("hand_img") # hand
-  stop = document.getElementById("stop") # "Stop Pero-Pero"
+  showcase = document.getElementById("showcase")
 
   offset_time = ->
     # from when the acceleration-changed event occurred
@@ -37,18 +33,8 @@ window.addEventListener 'load', ->
     updown -= first_updown
     # now updown is an offset angle
 
-    fg.setAttribute "style", [
-      ["left:", -rotation * 1.0, "px"].join(""),
-      ["top:", updown*1.2, "px"].join("")
-    ].join(";")
 
-    hand.setAttribute "style", [
-      ["left:", -rotation * 0.8, "px"].join(""),
-      ["top:", updown*1.0, "px"].join("")
+    showcase.setAttribute "style", [
+      ["-webkit-transform:rotateX(", -updown, "deg)",
+       "rotateY(", -rotation, "deg)"].join(""),
     ].join(";")
-
-    offset_rotation = - rotation - 90
-    offset_rotation *= BG_MAX / 120
-    bg.setAttribute "style", [
-      "background-position:", offset_rotation*1.8, "px ", updown*2.0, "px"
-    ].join("")

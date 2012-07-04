@@ -19,6 +19,7 @@ $side-gutter-width: $gutter-width;
 body {
   font-family: $font-family;
   color: $font-color; 
+  -webkit-perspective: 800;
 }
 body, div{
   padding:0;
@@ -29,30 +30,17 @@ a {
   @include link-colors($link-color, $link-hover-color, $link-focus-color, $link-active-color, $link-visited-color);
 }
 
-#panel, #bg, #fg{
-  width: 640px;
-  margin: 0 auto;
-  overflow: hidden;
-  text-align: center;
-  height: 710px;
-}
-#fg{
-  margin-top: -530px;
-  padding-top: 50px;
-}
-#bg{
-  margin-top: -60px;
-  background: url(../images/bg.png);
-}
-#bg_img, #fg_img, #bg, #fg, #hand_img, #stop_img{
-  position: relative;
-}
-#stop_img{
-  margin-top: -240px;
-}
-#hand_wrapper{
-  margin: -262px 0 0 224px;
-}
 p{
   text-align: center;
+}
+
+#showcase{
+  width: 423px;
+  height: 300px;
+  margin: 50px auto;
+}
+#showcase .panel{
+  background: url(/images/nc44150.jpg)/*rgba(50, 50, 50, 0.5)*/;
+  width: 423px;
+  height: 300px;
 }
