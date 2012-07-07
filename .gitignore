@@ -1,3 +1,3 @@
-build
+sample/build
 .DS_Store
-.sass-cache
+sample/.sass-cache
