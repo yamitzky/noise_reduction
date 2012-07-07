@@ -44,3 +44,10 @@ p{
   width: 423px;
   height: 300px;
 }
+#reduction{
+	-webkit-transform: scaleX(2) scaleY(2);
+	margin-right: 10px;
+}
+#controller{
+	padding: 0 20px;
+}
