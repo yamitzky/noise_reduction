@@ -1,3 +1,7 @@
+###
+  This library "chaser.js.coffee" is licensed under The MIT License.
+  Copyright(c) 2012 Yamitzky.
+###
 class Chaser
   constructor: ->
 		# PARAMETERS YOU CAN SET
